@@ -144,6 +144,7 @@ class _InputPageState extends State<InputPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             FloatingActionButton(
+                              heroTag: 'bwdWeightSub',
                               backgroundColor: Color(0xFF4C4F5E),
                               onPressed: () {
                                 setState(() {
@@ -159,6 +160,7 @@ class _InputPageState extends State<InputPage> {
                               width: 10.0,
                             ),
                             FloatingActionButton(
+                              heroTag: 'bwdWeightAdd',
                               backgroundColor: Color(0xFF4C4F5E),
                               onPressed: () {
                                 setState(() {
@@ -194,6 +196,7 @@ class _InputPageState extends State<InputPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             FloatingActionButton(
+                              heroTag: 'tagSub',
                               backgroundColor: Color(0xFF4C4F5E),
                               onPressed: () {
                                 setState(() {
@@ -213,6 +216,7 @@ class _InputPageState extends State<InputPage> {
                               width: 10.0,
                             ),
                             FloatingActionButton(
+                              heroTag: 'tagAdd',
                               backgroundColor: Color(0xFF4C4F5E),
                               onPressed: () {
                                 setState(() {
@@ -235,8 +239,7 @@ class _InputPageState extends State<InputPage> {
           ),
           ButtomButton(
               buttonText: 'CALCULATE',
-              onTap: () {
-                // TODO: There are multiple heroes that share the same tag within a subtree.
+              onTap: () { 
                 setState(() {
                   CalculateBrain _calculateBrain =
                       CalculateBrain(height: hegihtValue, weight: weightValue);
